@@ -6,6 +6,9 @@ import HomePage from './HomePage';
 import BookDetailPage from './BookDetailPage';
 import BookSearchPage from './BookSearchPage';
 import Header from './components/Header';
+import Footer from './components/Footer';
+import TermsAndServices from './TermsAndServices';
+import PrivacyPolicy from './PrivacyPolicy';
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
         
         {/* Book search page with dynamic name */}
         <Route path="/search/:name" element={<BookSearchPage />} />
+        <Route path="/terms" element={<TermsAndServices />} />
+        <Route path="/policy" element={<PrivacyPolicy />} />
+      
       </Routes>
       
       {/* Toast container for displaying notifications globally */}
@@ -37,6 +43,7 @@ function App() {
         draggable
         pauseOnHover
       />
+      <Footer/>
     </Router>
   );
 }
